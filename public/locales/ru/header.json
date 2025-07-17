@@ -1,9 +1,9 @@
 {
     "nav": {
-      "home": "Home",
-      "skills": "Skills",
-      "projects": "Projects",
-      "connect": "Connect"
+      "home": "Главная",
+      "skills": "Навыки",
+      "projects": "Проекты",
+      "connect": "Связаться"
     }
   }
   

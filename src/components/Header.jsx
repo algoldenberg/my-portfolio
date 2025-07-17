@@ -1,38 +1,54 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useParams, useNavigate } from 'react-router-dom';
+import { FaTelegramPlane, FaLinkedinIn, FaFacebookF, FaInstagram} from 'react-icons/fa';
 import '../styles/Header.css';
 
 function Header() {
-  const { t, i18n } = useTranslation('header'); // <- добавлен namespace 'header'
+  const { t, i18n } = useTranslation('header');
   const location = useLocation();
-  const currentLang = i18n.language || 'en';
+  const navigate = useNavigate();
+  const { lng } = useParams();
+  const currentLang = lng || i18n.language || 'en';
+
+  useEffect(() => {
+    document.documentElement.setAttribute('dir', currentLang === 'he' ? 'rtl' : 'ltr');
+  }, [currentLang]);
 
   const handleLanguageChange = (lang) => {
     if (lang !== currentLang) {
-      const path = location.pathname.replace(`/${currentLang}`, `/${lang}`);
+      const newPath = location.pathname.replace(`/${currentLang}`, `/${lang}`);
       i18n.changeLanguage(lang);
-      window.location.pathname = path;
+      navigate(newPath);
     }
   };
+
+  const prefix = `/${currentLang}`;
 
   return (
     <header className={`header ${currentLang === 'he' ? 'rtl' : ''}`}>
       <div className="container">
         <nav className="nav">
           <ul className="nav-links">
-            <li><a href="#home">{t('nav.home')}</a></li>
-            <li><a href="#skills">{t('nav.skills')}</a></li>
-            <li><a href="#projects">{t('nav.projects')}</a></li>
+            <li><a href={`${prefix}/#home`}>{t('nav.home')}</a></li>
+            <li><a href={`${prefix}/#skills`}>{t('nav.skills')}</a></li>
+            <li><a href={`${prefix}/#projects`}>{t('nav.projects')}</a></li>
           </ul>
 
           <div className="nav-right">
             <div className="social-icons">
-              <a href="https://t.me" target="_blank" rel="noopener noreferrer">✈</a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">in</a>
-              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">f</a>
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">🖼</a>
-              <a href="https://portfolio.com" target="_blank" rel="noopener noreferrer">🌐</a>
+              <a href="https://t.me/goldenberga" target="_blank" rel="noreferrer" className="social-icon">
+                <FaTelegramPlane />
+              </a>
+              <a href="https://linkedin.com/in/aleks-goldenberg-841069256" target="_blank" rel="noreferrer" className="social-icon">
+                <FaLinkedinIn />
+              </a>
+              <a href="https://facebook.com/agoldenberga" target="_blank" rel="noreferrer" className="social-icon">
+                <FaFacebookF />
+              </a>
+              <a href="https://instagram.com/goldenberga" target="_blank" rel="noreferrer" className="social-icon">
+                <FaInstagram />
+              </a>
             </div>
 
             <select
@@ -45,9 +61,10 @@ function Header() {
               <option value="he">HE</option>
             </select>
 
-            <Link to="/#contact" className="connect-btn">
-              {t('nav.connect')}
-            </Link>
+            <a href="mailto:algoldenberga@gmail.com" className="connect-btn">
+                <span>{t('nav.connect')}</span>
+            </a>
+
           </div>
         </nav>
       </div>

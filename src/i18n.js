@@ -6,16 +6,16 @@ i18n
   .use(HttpBackend)
   .use(initReactI18next)
   .init({
-    lng: 'en',
     fallbackLng: 'en',
-    debug: true,
-    ns: ['hero', 'about', 'projects', 'skills', 'contact', 'footer', 'header'],
-    defaultNS: 'hero',
-    backend: {
-      loadPath: '/locales/{{lng}}/{{ns}}.json',
+    supportedLngs: ['en', 'ru', 'he'],
+    debug: false,
+    ns: ['header'], // добавляй сюда все свои namespace'ы
+    defaultNS: 'home', // можно выбрать любой по умолчанию
+    interpolation: {
+      escapeValue: false,
     },
-    react: {
-      useSuspense: false,
+    backend: {
+      loadPath: '/locales/{{lng}}/{{ns}}.json', // ✅ путь с namespace
     },
   });
 
