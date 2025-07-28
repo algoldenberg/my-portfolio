@@ -9,8 +9,12 @@
   }
   
   .skills-container {
-    text-align: center;
     max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
   
   .skills-title {
@@ -37,38 +41,38 @@
   .key-skills {
     list-style: none;
     padding: 0;
+    margin: 0;
   }
   
   .key-skills li {
     font-size: 1.1rem;
     margin-bottom: 0.8rem;
     position: relative;
-    padding-left: 1.2rem;
   }
   
-  .key-skills li::before {
+  /* LTR */
+  :dir(ltr) .key-skills li {
+    padding-left: 1.2rem;
+    text-align: left;
+  }
+  
+  :dir(ltr) .key-skills li::before {
     content: '✔';
     color: #00c67c;
     position: absolute;
     left: 0;
   }
   
-  /* RTL Support */
-  .skills-section.rtl {
-    direction: rtl;
-  }
-  
-  .skills-section.rtl .skills-container {
+  /* RTL */
+  :dir(rtl) .key-skills li {
+    padding-right: 1.2rem;
     text-align: right;
   }
   
-  .skills-section.rtl .key-skills li {
-    padding-left: 0;
-    padding-right: 1.2rem;
-  }
-  
-  .skills-section.rtl .key-skills li::before {
-    left: auto;
+  :dir(rtl) .key-skills li::before {
+    content: '✔';
+    color: #00c67c;
+    position: absolute;
     right: 0;
   }
   
