@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next';
 import './i18n';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import Hero from './components/Hero';
 
 function LanguageWrapper() {
   const { lng } = useParams();
@@ -18,36 +19,8 @@ function LanguageWrapper() {
   return (
     <div className="app-container">
       <Header />
+      <Hero />
       <main>
-      <div style={{
-  display: 'flex',
-  flexDirection: 'column',
-  alignItems: 'center',
-  justifyContent: 'center',
-  height: '70vh',
-  textAlign: 'center',
-  color: "black"
-}}>
-  <img
-    src="https://i.pinimg.com/736x/53/2a/fa/532afae6b519d8506d2b8b52add12611.jpg"
-    alt="Cool Developer"
-    style={{
-      maxWidth: '300px',
-      width: '100%',
-      borderRadius: '12px',
-      boxShadow: '0 4px 15px rgba(0,0,0,0.6)'
-    }}
-  />
-  <p style={{
-    marginTop: '1rem',
-    fontSize: '1.25rem',
-    fontWeight: 'bold',
-    fontFamily: 'JetBrains Mono, monospace'
-  }}>
-    hire me I'm cool
-  </p>
-</div>
-
       </main>
       <Footer />
     </div>

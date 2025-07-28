@@ -24,9 +24,10 @@
 
 /* RTL зеркальное отображение */
 .header.rtl .nav {
-  flex-direction: row; /* не нужно row-reverse */
-  justify-content: flex-start; /* смещаем всё влево */
+  flex-direction: row-reverse;
+
 }
+
 
 .header.rtl .nav-links {
   flex-direction: row-reverse;
@@ -35,6 +36,11 @@
 .header.rtl .nav-right {
   flex-direction: row-reverse;
 }
+
+.header.rtl .social-icons {
+  flex-direction: row-reverse;
+}
+
 
 /* Навигация */
 .nav-links {

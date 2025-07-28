@@ -1,0 +1,13 @@
+{
+    "badge": "Welcome to my portfolio!",
+    "greeting": "Hi! I'm",
+    "name": "Alex Goldenberg",
+    "animatedRoles": [
+      "Automation & Web Engineer",
+      "Business Analyst",
+      "Creative Coder",
+      "Workflow Magician"
+    ],
+    "description": "I specialize in automating workflows and building smart web interfaces. With experience in both business analysis and frontend development, I love creating tools that make people's lives easier."
+  }
+  
