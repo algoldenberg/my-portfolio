@@ -9,13 +9,13 @@ i18n
     fallbackLng: 'en',
     supportedLngs: ['en', 'ru', 'he'],
     debug: false,
-    ns: ['header'], // добавляй сюда все свои namespace'ы
-    defaultNS: 'home', // можно выбрать любой по умолчанию
+    ns: ['header', 'hero', 'skills'], // добавляем сюда все namespace'ы
+    defaultNS: 'hero', // по умолчанию — блок hero
     interpolation: {
       escapeValue: false,
     },
     backend: {
-      loadPath: '/locales/{{lng}}/{{ns}}.json', // ✅ путь с namespace
+      loadPath: '/locales/{{lng}}/{{ns}}.json',
     },
   });
 

@@ -5,6 +5,7 @@ import './i18n';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Hero from './components/Hero';
+import Skills from './components/Skills';
 
 function LanguageWrapper() {
   const { lng } = useParams();
@@ -20,6 +21,7 @@ function LanguageWrapper() {
     <div className="app-container">
       <Header />
       <Hero />
+      <Skills />
       <main>
       </main>
       <Footer />
