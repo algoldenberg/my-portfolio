@@ -1,5 +1,12 @@
 import React, { useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route, Navigate, useParams } from 'react-router-dom';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+  useParams,
+  useLocation
+} from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import './i18n';
 import Header from './components/Header';
@@ -7,6 +14,23 @@ import Footer from './components/Footer';
 import Hero from './components/Hero';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
+
+function ScrollToHash() {
+  const { hash } = useLocation();
+
+  useEffect(() => {
+    if (hash) {
+      const el = document.querySelector(hash);
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth' });
+      }
+    } else {
+      window.scrollTo({ top: 0 });
+    }
+  }, [hash]);
+
+  return null;
+}
 
 function LanguageWrapper() {
   const { lng } = useParams();
@@ -20,11 +44,18 @@ function LanguageWrapper() {
 
   return (
     <div className="app-container">
+      <ScrollToHash />
       <Header />
-      <Hero />
-      <Skills />
-      <Projects />
       <main>
+        <section id="home">
+          <Hero />
+        </section>
+        <section id="skills">
+          <Skills />
+        </section>
+        <section id="projects">
+          <Projects />
+        </section>
       </main>
       <Footer />
     </div>

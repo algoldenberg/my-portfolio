@@ -56,7 +56,7 @@ function Hero() {
         </h1>
         <h2 className="hero-subtitle">
           <span className="animated-text">{displayedText}</span>
-          <span className="cursor">|</span>
+
         </h2>
         <p className="hero-description">{t('description')}</p>
       </div>

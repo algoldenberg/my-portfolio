@@ -142,7 +142,7 @@ function Projects() {
   return (
     <section className="projects-section">
       <h2 className="projects-title">{t('title')}</h2>
-
+      <p className="projects-description">{t('description')}</p>
       <div className="filter-buttons">
         {categories.map(cat => (
           <button
