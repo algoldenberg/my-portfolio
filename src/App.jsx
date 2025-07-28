@@ -6,6 +6,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import Hero from './components/Hero';
 import Skills from './components/Skills';
+import Projects from './components/Projects';
 
 function LanguageWrapper() {
   const { lng } = useParams();
@@ -22,6 +23,7 @@ function LanguageWrapper() {
       <Header />
       <Hero />
       <Skills />
+      <Projects />
       <main>
       </main>
       <Footer />

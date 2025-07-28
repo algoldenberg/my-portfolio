@@ -1,0 +1,30 @@
+{
+    "title": "Projects",
+    "categories": {
+      "all": "All",
+      "featured": "Featured",
+      "automation": "Automation & Bots",
+      "webapp": "Web Apps",
+      "client": "Client Work",
+      "civic": "Civic / Social Impact",
+      "fun": "Just for Fun"
+    },
+    "diagnostic_desc": "A Telegram bot that diagnoses the best product for each business.",
+    "nekudot_desc": "A multilingual calculator that helps Olim understand their tax benefits.",
+    "aiba_desc": "An automation system that connects businesses with AI solutions in seconds.",
+    "audiohebbot_desc": "Voice-to-text bot for Hebrew learners. Converts speech into readable Hebrew.",
+    "ozon_league_desc": "Gamified program for boosting team engagement and tracking progress.",
+    "ozon_kam_desc": "A digital learning hub for key account managers at Ozon.",
+    "ozon_lead_desc": "Lead qualification portal for onboarding and performance tracking.",
+    "equitech_desc": "Corporate site for Equitech, a FinTech impact accelerator in Tel Aviv.",
+    "fintech_desc": "The official website for FinTech Aviv — Israel’s leading FinTech community.",
+    "color_desk_desc": "Playful tool to explore accessible color schemes for design interfaces.",
+    "aim_game_desc": "Mini-game that tests aiming skills with increasing difficulty.",
+    "slider_desc": "Animated slider component for image showcases and feature highlights.",
+    "trello_desc": "A Trello-style board with draggable tasks and responsive layout.",
+    "postcards_desc": "A photo gallery showcasing digital postcards in a minimal grid layout.",
+    "aspect_ratio_desc": "Simple tool to calculate image and video aspect ratios.",
+    "color_parrot_desc": "Fun experiment with CSS filters applied to a colorful parrot.",
+    "drumkit_desc": "A virtual drum kit controlled by keyboard — just for fun."
+  }
+  

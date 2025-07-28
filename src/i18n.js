@@ -9,7 +9,7 @@ i18n
     fallbackLng: 'en',
     supportedLngs: ['en', 'ru', 'he'],
     debug: false,
-    ns: ['header', 'hero', 'skills'], // добавляем сюда все namespace'ы
+    ns: ['header', 'hero', 'skills', 'projects'], // добавляем сюда все namespace'ы
     defaultNS: 'hero', // по умолчанию — блок hero
     interpolation: {
       escapeValue: false,
