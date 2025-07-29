@@ -58,5 +58,5 @@ main {
 
 /* Отступ при якорной прокрутке */
 #projects {
-  scroll-margin-top: 180px;
+  scroll-margin-top: 90px;
 }

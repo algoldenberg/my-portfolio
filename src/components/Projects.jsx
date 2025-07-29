@@ -19,6 +19,13 @@ const projectsData = [
     categories: ['automation', 'client']
   },
   {
+    title: 'Hr Helper bot',
+    descriptionKey: 'hr_bot_desc',
+    image: '',
+    link: 'https://aibahub.com/en/',
+    categories: ['featured', 'automation', 'client']
+  },
+  {
     title: 'Nekudot Tax Calculator',
     descriptionKey: 'nekudot_desc',
     image: '',

@@ -94,14 +94,4 @@
 .hero-section.rtl {
   flex-direction: row-reverse;
   text-align: right;
-  padding: 4rem 15%;
-}
-
-.hero-section.rtl .hero-content {
-  margin-left: 0;
-  margin-right: auto;
-}
-
-.hero-section.rtl .hero-image {
-  justify-content: center;
 }

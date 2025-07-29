@@ -31,8 +31,8 @@ function Header() {
         <nav className="nav">
           <ul className="nav-links">
             <li><a href={`${prefix}/#home`}>{t('nav.home')}</a></li>
-            <li><a href={`${prefix}/#skills`}>{t('nav.skills')}</a></li>
             <li><a href={`${prefix}/#projects`}>{t('nav.projects')}</a></li>
+            <li><a href={`${prefix}/#skills`}>{t('nav.skills')}</a></li>
           </ul>
 
           <div className="nav-right">
