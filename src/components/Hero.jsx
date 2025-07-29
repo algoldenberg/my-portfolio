@@ -1,6 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react';
 import '../styles/Hero.css';
 import { useTranslation } from 'react-i18next';
+import photo from '../assets/Photo_4.png';
+
 
 function Hero() {
   const { t } = useTranslation('hero');
@@ -30,7 +32,7 @@ function Hero() {
 
     if (!isDeleting && updatedText === current) {
       setPause(true);
-      setTimeout(() => setPause(false), 1000); // задержка 1 секунда
+      setTimeout(() => setPause(false), 1000);
       setIsDeleting(true);
       return;
     }
@@ -56,16 +58,16 @@ function Hero() {
         </h1>
         <h2 className="hero-subtitle">
           <span className="animated-text">{displayedText}</span>
-
         </h2>
         <p className="hero-description">{t('description')}</p>
       </div>
       <div className="hero-image">
-        <img
-          src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Avatar_Head.svg/2048px-Avatar_Head.svg.png"
-          alt={t('name')}
-          className="hero-photo"
-        />
+      <img
+  src={photo}
+  alt={t('name')}
+  className="hero-photo"
+/>
+
       </div>
     </section>
   );

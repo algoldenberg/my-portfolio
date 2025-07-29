@@ -1,21 +1,8 @@
-@font-face {
-  font-family: 'JetBrains Mono', monospace;
-  src: url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100&display=swap');
-  font-weight: 700;
-}
+/* Импорт шрифтов */
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@400;700&display=swap');
 
-@font-face {
-  font-family: 'JetBrains Mono', monospace;
-  src: url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100&display=swap');
-  font-weight: 500;
-}
-
-@font-face {
-  font-family: 'JetBrains Mono', monospace;
-  src: url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100&display=swap');
-  font-weight: 400;
-}
-
+/* Базовые стили */
 * {
   margin: 0;
   padding: 0;
@@ -32,16 +19,23 @@ html, body, #root {
 }
 
 body {
-  background-color: #f5f5f5;
+  background-color: #1E242C;
   color: #ffffff;
   line-height: 1.6;
   direction: ltr;
 }
 
+/* Только иврит получает другой шрифт */
+:lang(he) {
+  font-family: 'Assistant', sans-serif;
+}
+
+/* RTL поведение */
 body.rtl {
   direction: rtl;
 }
 
+/* Ссылки и списки */
 a {
   text-decoration: none;
   color: inherit;
@@ -51,6 +45,7 @@ ul {
   list-style: none;
 }
 
+/* Layout */
 .app-container {
   display: flex;
   flex-direction: column;
@@ -61,6 +56,7 @@ main {
   flex: 1;
 }
 
+/* Отступ при якорной прокрутке */
 #projects {
-  scroll-margin-top: 80px;
+  scroll-margin-top: 180px;
 }

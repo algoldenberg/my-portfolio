@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link, useLocation, useParams, useNavigate } from 'react-router-dom';
-import { FaTelegramPlane, FaLinkedinIn, FaFacebookF, FaInstagram} from 'react-icons/fa';
+import { FaTelegramPlane, FaWhatsapp, FaLinkedinIn, FaFacebookF } from 'react-icons/fa';
 import '../styles/Header.css';
 
 function Header() {
@@ -40,14 +40,11 @@ function Header() {
               <a href="https://t.me/goldenberga" target="_blank" rel="noreferrer" className="social-icon">
                 <FaTelegramPlane />
               </a>
+              <a href="https://wa.me/972506967370" target="_blank" rel="noreferrer" className="social-icon">
+                <FaWhatsapp />
+              </a>
               <a href="https://linkedin.com/in/aleks-goldenberg-841069256" target="_blank" rel="noreferrer" className="social-icon">
                 <FaLinkedinIn />
-              </a>
-              <a href="https://facebook.com/agoldenberga" target="_blank" rel="noreferrer" className="social-icon">
-                <FaFacebookF />
-              </a>
-              <a href="https://instagram.com/goldenberga" target="_blank" rel="noreferrer" className="social-icon">
-                <FaInstagram />
               </a>
             </div>
 
@@ -62,9 +59,8 @@ function Header() {
             </select>
 
             <a href="mailto:algoldenberga@gmail.com" className="connect-btn">
-                <span>{t('nav.connect')}</span>
+              <span>{t('nav.connect')}</span>
             </a>
-
           </div>
         </nav>
       </div>

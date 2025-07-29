@@ -10,7 +10,6 @@
   padding: 0 20px;
 }
 
-
 .header .container {
   max-width: 1500px;
   margin: 0 auto;
@@ -20,30 +19,17 @@
 .nav {
   display: flex;
   align-items: center;
-  justify-content: flex-end; /* смещаем всё направо */
+  justify-content: flex-end;
   height: 80px;
-  gap: 32px; /* добавим расстояние между левым и правым блоком */
+  gap: 32px;
 }
 
-/* RTL зеркальное отображение */
-.header.rtl .nav {
-  flex-direction: row-reverse;
-
-}
-
-
-.header.rtl .nav-links {
-  flex-direction: row-reverse;
-}
-
-.header.rtl .nav-right {
-  flex-direction: row-reverse;
-}
-
+.header.rtl .nav,
+.header.rtl .nav-links,
+.header.rtl .nav-right,
 .header.rtl .social-icons {
   flex-direction: row-reverse;
 }
-
 
 /* Навигация */
 .nav-links {
@@ -75,34 +61,41 @@
 /* Иконки соцсетей */
 .social-icons {
   display: flex;
-  gap: 16px;
+  gap: 12px;
 }
 
 .social-icon {
+  width: 42px;
+  height: 42px;
   color: #fff;
-  border: 1px solid #fff;
-  border-radius: 50%;
-  padding: 8px;
+  border: 1.5px solid #fff;
+  border-radius: 12px;
   transition: all 0.3s ease;
   display: flex;
   align-items: center;
   justify-content: center;
+  font-size: 18px;
 }
-
 .social-icon:hover {
   background-color: #fff;
   color: #000;
-}
-
-/* Селектор языка */
+} 
+/* Селектор языка как квадратная иконка */
 .language-selector {
-  font-size: 16px;
+  width: 42px;
+  height: 42px;
+  border: 1.5px solid #fff;
+  border-radius: 12px;
   background: transparent;
   color: #fff;
-  border: 1.5px solid #fff;
-  padding: 4px 10px;
+  font-size: 16px;
+  text-align: center;
+  padding: 0;
   cursor: pointer;
   appearance: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .language-selector option {
@@ -113,6 +106,7 @@
 /* Кнопка Connect */
 .connect-btn {
   border: 1.5px solid #fff;
+  border-radius: 12px; /* ✅ добавлено */
   color: #fff;
   padding: 8px 20px;
   font-size: 17px;
@@ -129,7 +123,6 @@
   z-index: 2;
 }
 
-/* Светлая заливка по направлению */
 .connect-btn::before {
   content: '';
   position: absolute;
@@ -139,6 +132,7 @@
   width: 0%;
   transition: all 0.4s ease;
   z-index: 1;
+  border-radius: 12px; /* ✅ добавлено */
 }
 
 /* LTR: слева направо */
@@ -159,7 +153,6 @@
   width: 100%;
 }
 
-/* Цвет текста при ховере */
 .connect-btn:hover {
   color: #000;
 }

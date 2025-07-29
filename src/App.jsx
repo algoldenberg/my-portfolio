@@ -14,6 +14,8 @@ import Footer from './components/Footer';
 import Hero from './components/Hero';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
+import FunnyCard from './components/FunnyCard';
+import BackToTop from './components/BackToTop';
 
 function ScrollToHash() {
   const { hash } = useLocation();
@@ -50,13 +52,15 @@ function LanguageWrapper() {
         <section id="home">
           <Hero />
         </section>
+        <section id="projects">
+          <Projects />
+          </section>
         <section id="skills">
           <Skills />
         </section>
-        <section id="projects">
-          <Projects />
-        </section>
+        <FunnyCard />
       </main>
+      <BackToTop />
       <Footer />
     </div>
   );
