@@ -51,7 +51,6 @@ function LanguageWrapper() {
       <Header />
       <main>
         <section id="home">
-          <Hero />
         </section>
         <section id="projects">
           <Projects />
