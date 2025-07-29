@@ -41,3 +41,38 @@
   color: #ffffff;
   font-family: 'JetBrains Mono', monospace !important;
 }
+
+@media screen and (max-width: 768px) {
+  .funny-centered-card {
+    width: 90vw;
+    padding: 1.5rem;
+  }
+
+  .funny-centered-img-small {
+    width: 220px;
+  }
+
+  .funny-centered-text {
+    font-size: 1.2rem;
+  }
+
+  .funny-header-text {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    padding: 0 1rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .funny-centered-img-small {
+    width: 180px;
+  }
+
+  .funny-centered-text {
+    font-size: 1rem;
+  }
+
+  .funny-centered-card {
+    padding: 1rem;
+  }
+}
