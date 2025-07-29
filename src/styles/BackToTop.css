@@ -37,3 +37,11 @@
     left: 2rem;
   }
   
+
+  @media screen and (max-width: 768px) {
+    .back-to-top {
+      bottom: 6.5rem; /* или больше по вкусу */
+      margin-bottom: 0;
+    }
+  }
+  
