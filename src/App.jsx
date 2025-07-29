@@ -42,6 +42,7 @@ function LanguageWrapper() {
     if (lng && i18n.language !== lng) {
       i18n.changeLanguage(lng);
     }
+    document.documentElement.lang = lng || 'en';
   }, [lng, i18n]);
 
   return (
@@ -54,7 +55,7 @@ function LanguageWrapper() {
         </section>
         <section id="projects">
           <Projects />
-          </section>
+        </section>
         <section id="skills">
           <Skills />
         </section>
@@ -65,6 +66,7 @@ function LanguageWrapper() {
     </div>
   );
 }
+
 
 function App() {
   return (
