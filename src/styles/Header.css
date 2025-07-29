@@ -22,6 +22,7 @@
   justify-content: flex-end;
   height: 80px;
   gap: 32px;
+  position: relative;
 }
 
 .header.rtl .nav,
@@ -56,6 +57,19 @@
   display: flex;
   align-items: center;
   gap: 16px;
+  position: absolute;
+  right: 20px;
+}
+
+.header.rtl .nav-right {
+  right: auto;
+  left: 20px;
+}
+
+.nav-desktop {
+  display: flex;
+  align-items: center;
+  gap: 16px;
 }
 
 /* Иконки соцсетей */
@@ -76,10 +90,12 @@
   justify-content: center;
   font-size: 18px;
 }
+
 .social-icon:hover {
   background-color: #fff;
   color: #000;
-} 
+}
+
 /* Селектор языка как квадратная иконка */
 .language-selector {
   width: 42px;
@@ -106,7 +122,7 @@
 /* Кнопка Connect */
 .connect-btn {
   border: 1.5px solid #fff;
-  border-radius: 12px; /* ✅ добавлено */
+  border-radius: 12px;
   color: #fff;
   padding: 8px 20px;
   font-size: 17px;
@@ -132,7 +148,7 @@
   width: 0%;
   transition: all 0.4s ease;
   z-index: 1;
-  border-radius: 12px; /* ✅ добавлено */
+  border-radius: 12px;
 }
 
 /* LTR: слева направо */
@@ -155,4 +171,107 @@
 
 .connect-btn:hover {
   color: #000;
+}
+
+/* Кнопка бургера */
+.burger {
+  display: none;
+  cursor: pointer;
+  color: white;
+}
+
+/* Меню в десктопе */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 48px;
+  padding: 0;
+  margin: 0;
+}
+
+/* Меню при открытом бургере */
+.nav-links.open {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 80px;
+  left: 0;
+  right: 0;
+  background-color: #0e1111;
+  padding: 20px;
+  z-index: 999;
+  gap: 20px;
+}
+
+.nav-links li {
+  text-align: center;
+}
+
+/* Соцсети и кнопка Connect в мобилке */
+.mobile-socials,
+.mobile-connect {
+  display: none;
+}
+
+/* Селектор языка для мобилки */
+.nav-mobile-lang {
+  display: none;
+}
+
+/* Адаптивка */
+@media (max-width: 768px) {
+  .burger {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .nav-right .nav-desktop {
+    display: none;
+  }
+
+  .mobile-socials,
+  .mobile-connect {
+    display: block;
+  }
+
+  .nav-mobile-lang {
+    display: block;
+  }
+
+  .nav-mobile-lang .language-selector {
+    margin-left: 8px;
+  }
+
+  .nav-right .language-selector {
+    display: none;
+  }
+
+  .nav {
+    justify-content: space-between;
+  }
+}
+
+/* Общее мобильное меню RTL */
+.header.rtl .nav-links.open {
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.header.rtl .nav-links.open li {
+  text-align: right;
+}
+
+/* RTL: соцсети и Connect */
+.header.rtl .mobile-socials {
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+.header.rtl .mobile-connect {
+  display: flex;
+  justify-content: flex-end;
 }
