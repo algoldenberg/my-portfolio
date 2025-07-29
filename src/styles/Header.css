@@ -19,7 +19,7 @@
 .nav {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: space-between; /* исправлено */
   height: 80px;
   gap: 32px;
   position: relative;
@@ -57,8 +57,7 @@
   display: flex;
   align-items: center;
   gap: 16px;
-  position: absolute;
-  right: 20px;
+  position: static; /* исправлено */
 }
 
 .header.rtl .nav-right {
@@ -222,6 +221,7 @@
 @media (max-width: 768px) {
   .burger {
     display: block;
+    margin-left: 16px; /* чтобы отступ был между селектором и бургером */
   }
 
   .nav-links {
@@ -239,6 +239,7 @@
 
   .nav-mobile-lang {
     display: block;
+    margin-right: auto; /* чтобы селектор языка прижался влево */
   }
 
   .nav-mobile-lang .language-selector {
@@ -250,8 +251,10 @@
   }
 
   .nav {
-    justify-content: space-between;
+    justify-content: flex-end; /* возвращаем бургер на место */
   }
+
+
 }
 
 /* Общее мобильное меню RTL */
