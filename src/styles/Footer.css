@@ -46,3 +46,28 @@
     color: #9158e2;
   }
   
+
+  @media (max-width: 768px) {
+    .footer {
+      margin-top: 3rem;
+      padding: 32px 24px;
+      padding-bottom: 100px; 
+    }
+  
+    .footer-content {
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+      text-align: center;
+    }
+  
+    .footer-left p {
+      font-size: 13px;
+    }
+  
+    .footer-right a {
+      font-size: 20px;
+      margin: 0 10px;
+    }
+  }
+  
