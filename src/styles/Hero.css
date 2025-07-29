@@ -91,12 +91,13 @@
   }
 }
 
-/* Адаптивность */
 @media screen and (max-width: 1024px) {
   .hero-section {
     flex-direction: column;
     text-align: center;
     padding: 3rem 5%;
+    justify-content: flex-start;
+    min-height: auto;
   }
 
   .hero-section.rtl {
@@ -109,34 +110,54 @@
   }
 
   .hero-title {
-    font-size: 2.4rem;
+    font-size: 2.2rem;
+    word-break: break-word;
+    hyphens: auto;
   }
 
   .hero-subtitle {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     height: auto;
+    word-break: break-word;
+    max-width: 100%;
+  }
+
+  .animated-text {
+    white-space: normal;
+    border-right: none;
+    display: inline;
+  }
+
+  /* 👇 Только в адаптиве: перенос после & */
+  .animated-text::before {
+    content: attr(data-text);
+    display: inline;
+    white-space: pre-wrap;
   }
 
   .hero-description {
     font-size: 0.95rem;
+    margin-top: 1rem;
+    line-height: 1.5;
   }
 
   .hero-image {
-    margin-top: 2rem;
+    margin-top: 1.5rem;
   }
 
   .hero-photo {
-    max-width: 300px;
+    max-width: 280px;
   }
 }
 
+
 @media screen and (max-width: 600px) {
   .hero-title {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 
   .hero-subtitle {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
   }
 
   .hero-description {
@@ -144,6 +165,10 @@
   }
 
   .hero-photo {
-    max-width: 250px;
+    max-width: 240px;
+  }
+
+  .hero-content {
+    padding: 0 1rem;
   }
 }

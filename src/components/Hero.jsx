@@ -57,7 +57,16 @@ function Hero() {
           {t('greeting')} <span className="highlight">{t('name')}</span>
         </h1>
         <h2 className="hero-subtitle">
-          <span className="animated-text">{displayedText}</span>
+        <span
+  className="animated-text"
+  dangerouslySetInnerHTML={{
+    __html:
+      window.innerWidth <= 1024
+        ? displayedText.replace('&', '<br />&')
+        : displayedText,
+  }}
+/>
+
         </h2>
         <p className="hero-description">{t('description')}</p>
       </div>
