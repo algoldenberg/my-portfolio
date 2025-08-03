@@ -76,3 +76,11 @@
     right: 0;
   }
   
+
+  @media (max-width: 768px) {
+    .skills-section {
+      margin-top: 50px; /* регулируй по вкусу */
+      height: auto; /* отменяем 100vh для мобил */
+    }
+  }
+  

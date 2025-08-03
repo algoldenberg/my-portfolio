@@ -54,8 +54,10 @@ function Hero() {
       <div className="hero-content">
         <span className="hero-badge">{t('badge')}</span>
         <h1 className="hero-title">
-          {t('greeting')} <span className="highlight">{t('name')}</span>
-        </h1>
+  {t('greeting')} <br />
+  <span className="highlight">{t('name')}</span>
+</h1>
+
         <h2 className="hero-subtitle">
         <span
   className="animated-text"

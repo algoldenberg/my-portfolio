@@ -12,6 +12,13 @@ const projectsData = [
     categories: ['featured', 'automation', 'client']
   },
   {
+    title: 'Darcon Calculator',
+    descriptionKey: 'darcon_desc',
+    image: '',
+    link: 'https://darcon-calculator.netlify.app/',
+    categories: ['featured', 'webapp', 'civic']
+  },
+  {
     title: 'AIBA Diagnostic Bot',
     descriptionKey: 'diagnostic_desc',
     image: '',

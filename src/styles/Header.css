@@ -22,8 +22,10 @@
   justify-content: flex-end;
   height: 80px;
   gap: 32px;
+  position: relative;
 }
 
+/* RTL */
 .header.rtl .nav,
 .header.rtl .nav-links,
 .header.rtl .nav-right,
@@ -88,29 +90,6 @@
   color: #000;
 }
 
-/* Селектор языка как квадратная иконка */
-.language-selector {
-  width: 42px;
-  height: 42px;
-  border: 1.5px solid #fff;
-  border-radius: 12px;
-  background: transparent;
-  color: #fff;
-  font-size: 16px;
-  text-align: center;
-  padding: 0;
-  cursor: pointer;
-  appearance: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.language-selector option {
-  color: #000;
-  background: #fff;
-}
-
 /* Кнопка Connect */
 .connect-btn {
   border: 1.5px solid #fff;
@@ -143,7 +122,7 @@
   border-radius: 12px;
 }
 
-/* LTR: слева направо */
+/* LTR */
 .header:not(.rtl) .connect-btn::before {
   left: 0;
 }
@@ -152,7 +131,7 @@
   width: 100%;
 }
 
-/* RTL: справа налево */
+/* RTL */
 .header.rtl .connect-btn::before {
   right: 0;
 }
@@ -165,20 +144,11 @@
   color: #000;
 }
 
-/* Кнопка бургера */
+/* Бургер-меню */
 .burger {
   display: none;
   cursor: pointer;
   color: white;
-}
-
-/* Меню в десктопе */
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 48px;
-  padding: 0;
-  margin: 0;
 }
 
 /* Меню при открытом бургере */
@@ -199,103 +169,82 @@
   text-align: center;
 }
 
-/* Соцсети и кнопка Connect в мобилке */
+/* Mobile-only */
 .mobile-socials,
-.mobile-connect {
-  display: none;
-}
-
-/* Селектор языка для мобилки */
+.mobile-connect,
 .nav-mobile-lang {
   display: none;
 }
 
-/* Адаптивка */
+/* Флаги (desktop + mobile) */
+.lang-flags,
+.nav-mobile-lang {
+  display: flex;
+  gap: 10px;
+}
+
+.lang-flag-btn {
+  border: 1.5px solid #fff;
+  border-radius: 12px;
+  padding: 9px;
+  background: transparent;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 42px;
+  width: 42px;
+  transition: all 0.3s ease;
+}
+
+.lang-flag-btn.active {
+  background: #fff;
+}
+
+.lang-flag-btn.active .lang-flag {
+  filter: grayscale(0);
+}
+
+.lang-flag {
+  display: block;
+  width: 24px;
+  height: 16px;
+  filter: grayscale(1);
+  transition: filter 0.3s ease;
+}
+
+.lang-flag-btn:hover .lang-flag {
+  filter: grayscale(0);
+}
+
+/* Media: Mobile */
 @media (max-width: 768px) {
   .burger {
     display: block;
+    order: 2;
   }
 
   .nav-links {
     display: none;
-  }
-
-  .nav-right .nav-desktop {
-    display: none;
-  }
-
-  .mobile-socials,
-  .mobile-connect {
-    display: block;
-  }
-
-  .nav-mobile-lang {
-    display: block;
-  }
-
-  .nav-mobile-lang .language-selector {
-    margin-left: 8px;
-  }
-
-  .nav-right .language-selector {
-    display: none;
-  }
-
-  .nav {
-    justify-content: space-between;
-  }
-}
-
-
-/* Расположение элементов в мобилке */
-@media (max-width: 768px) {
-  .nav {
-    justify-content: space-between;
-    flex-direction: row;
-  }
-
-  .nav-mobile-lang {
-    display: block;
-    order: 1;
-  }
-
-  .burger {
-    display: block;
-    order: 2;
   }
 
   .nav-right.nav-desktop {
     display: none;
   }
 
-  .nav-links {
-    display: none;
-  }
-
-  .nav-links.open {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 80px;
-    left: 0;
-    right: 0;
-    background-color: #0e1111;
-    padding: 20px;
-    z-index: 999;
-    gap: 20px;
-  }
-
-  .nav-links li {
-    text-align: center;
-  }
-
   .mobile-socials,
   .mobile-connect {
     display: block;
   }
 
-  .nav-mobile-lang .language-selector {
-    margin-left: 8px;
+  .nav-mobile-lang {
+    display: flex;
+    order: 1;
+  }
+
+  .nav {
+    justify-content: space-between;
+    flex-direction: row;
   }
 
   .header:not(.rtl) .nav-mobile-lang {
@@ -314,7 +263,6 @@
     margin-right: auto;
   }
 
-  /* Центрируем кнопку и социконки в RTL */
   .header.rtl .mobile-connect,
   .header.rtl .mobile-socials {
     align-self: center;
@@ -323,10 +271,13 @@
   .header.rtl .social-icons {
     justify-content: center;
   }
+
+  .lang-flags {
+    display: none;
+  }
 }
 
-
-/* RTL правки для открытого мобильного меню */
+/* RTL общие */
 .header.rtl .nav-links.open,
 .header:not(.rtl) .nav-links.open {
   flex-direction: column;

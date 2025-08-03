@@ -60,3 +60,15 @@ main {
 #projects {
   scroll-margin-top: 90px;
 }
+
+@media (max-width: 768px) {
+  #skills {
+    scroll-margin-top: 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  #project {
+    scroll-margin-top: 50px;
+  }
+}

@@ -109,17 +109,20 @@
     max-width: 100%;
   }
 
-  .hero-title {
-    font-size: 2.2rem;
-    word-break: break-word;
-    hyphens: auto;
+  .hero-title .highlight {
+    display: inline-block;
+    white-space: nowrap;
+    margin-top: 0.4rem;
   }
+  
 
   .hero-subtitle {
     font-size: 1.4rem;
-    height: auto;
-    word-break: break-word;
+    height: 4rem; /* фиксированная высота */
     max-width: 100%;
+    overflow: hidden;
+    line-height: 1.6;
+    position: relative;
   }
 
   .animated-text {

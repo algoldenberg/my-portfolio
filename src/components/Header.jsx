@@ -12,7 +12,6 @@ function Header() {
   const { lng } = useParams();
   const currentLang = lng || i18n.language || 'en';
   const prefix = `/${currentLang}`;
-
   const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
@@ -27,30 +26,39 @@ function Header() {
     }
   };
 
+  const renderFlag = (flag, lang) => (
+    <button
+      key={lang}
+      className={`lang-flag-btn ${currentLang === lang ? 'active' : ''}`}
+      onClick={() => handleLanguageChange(lang)}
+    >
+      <img
+        src={`https://flagcdn.com/w40/${flag}.png`}
+        srcSet={`https://flagcdn.com/w80/${flag}.png 2x`}
+        width="24"
+        height="16"
+        alt={flag}
+        className="lang-flag"
+      />
+    </button>
+  );
+
   return (
     <header className={`header ${currentLang === 'he' ? 'rtl' : ''}`}>
       <div className="container">
         <nav className="nav">
 
-          {/* Левый край: селектор языка */}
+          {/* Мобильный флаг */}
           <div className="nav-mobile-lang">
-            <select
-              value={currentLang}
-              onChange={(e) => handleLanguageChange(e.target.value)}
-              className="language-selector"
-            >
-              <option value="en">EN</option>
-              <option value="ru">RU</option>
-              <option value="he">HE</option>
-            </select>
+            {renderFlag('us', 'en')}
+            {renderFlag('ru', 'ru')}
+            {renderFlag('il', 'he')}
           </div>
 
-          {/* Бургер-кнопка */}
           <div className="burger" onClick={() => setMenuOpen(!menuOpen)}>
             {menuOpen ? <HiX size={28} /> : <HiOutlineMenu size={28} />}
           </div>
 
-          {/* Навигация (десктоп и мобильный open) */}
           <ul className={`nav-links ${menuOpen ? 'open' : ''}`}>
             <li><a href={`${prefix}/#home`} onClick={() => setMenuOpen(false)}>{t('nav.home')}</a></li>
             <li><a href={`${prefix}/#projects`} onClick={() => setMenuOpen(false)}>{t('nav.projects')}</a></li>
@@ -67,22 +75,13 @@ function Header() {
             </li>
           </ul>
 
-          {/* Правая часть только для десктопа */}
           <div className="nav-right nav-desktop">
             <div className="social-icons">
               <a href="https://t.me/goldenberga" target="_blank" rel="noreferrer" className="social-icon"><FaTelegramPlane /></a>
               <a href="https://wa.me/972506967370" target="_blank" rel="noreferrer" className="social-icon"><FaWhatsapp /></a>
               <a href="https://linkedin.com/in/aleks-goldenberg-841069256" target="_blank" rel="noreferrer" className="social-icon"><FaLinkedinIn /></a>
             </div>
-            <select
-              value={currentLang}
-              onChange={(e) => handleLanguageChange(e.target.value)}
-              className="language-selector"
-            >
-              <option value="en">EN</option>
-              <option value="ru">RU</option>
-              <option value="he">HE</option>
-            </select>
+
             <a href="mailto:algoldenberga@gmail.com" className="connect-btn">
               <span>{t('nav.connect')}</span>
             </a>
