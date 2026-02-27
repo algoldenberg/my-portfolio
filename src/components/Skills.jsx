@@ -6,18 +6,19 @@ function Skills() {
   const { t } = useTranslation('skills');
 
   const techStack = [
-    'React', 'Python', 'JavaScript', 'aiogram', 'GPT API',
-    'Google Sheets API', 'Telegram Bot API', 'SQLite', 'Vite', 'CSS', 'HTML'
+    'Docker', 'Python', 'Kubernetes', 'Nginx', 'Linux',
+    'GitHub Actions', 'Bash', 'FastAPI', 'Redis', 'SQLite',
+    'React', 'JavaScript', 'Git', 'CI/CD', 'Microservices'
   ];
 
   const keySkills = [
-    'processOptimization',
-    'crossFunctionalCollab',
-    'requirementsGathering',
-    'promptDesign',
-    'toolsCoordination',
-    'dashboarding',
-    'edtechExperience'
+    'infrastructureAutomation',
+    'cicdPipelines',
+    'containerization',
+    'microservices',
+    'cloudInfrastructure',
+    'systemMonitoring',
+    'processOptimization'
   ];
 
   const isRTL = document.documentElement.dir === 'rtl';

@@ -1,11 +1,10 @@
 {
-    "title": "Skills & Technologies",
-    "processOptimization": "Process Optimization & Workflow Automation",
-    "crossFunctionalCollab": "Cross-Functional Collaboration (Product, Dev, Analytics, Sales)",
-    "requirementsGathering": "Requirements Gathering & Feature Roadmapping",
-    "promptDesign": "Prompt & Flow Design for Chatbots (OpenAI, Telegram)",
-    "toolsCoordination": "Salesforce, Bitrix, Google Analytics, Notion, Power BI (coordination)",
-    "dashboarding": "KPI & Performance Dashboarding",
-    "edtechExperience": "EdTech, LMS Systems, and Training Program Development"
-  }
-  
+  "title": "Technical Stack",
+  "infrastructureAutomation": "Infrastructure Automation & Orchestration",
+  "cicdPipelines": "CI/CD Pipeline Design & Implementation",
+  "containerization": "Containerization & Docker Management",
+  "microservices": "Microservices Architecture",
+  "cloudInfrastructure": "Cloud Infrastructure (AWS, VPS, GPU)",
+  "systemMonitoring": "System Monitoring & Logging",
+  "processOptimization": "Process Optimization & Deployment Automation"
+}

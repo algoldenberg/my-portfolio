@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link, useLocation, useParams, useNavigate } from 'react-router-dom';
-import { FaTelegramPlane, FaWhatsapp, FaLinkedinIn } from 'react-icons/fa';
+import { FaTelegramPlane, FaWhatsapp, FaLinkedinIn, FaGithub } from 'react-icons/fa';
 import { HiOutlineMenu, HiX } from 'react-icons/hi';
 import '../styles/Header.css';
 
@@ -71,6 +71,7 @@ function Header() {
                 <a href="https://t.me/goldenberga" target="_blank" rel="noreferrer" className="social-icon"><FaTelegramPlane /></a>
                 <a href="https://wa.me/972506967370" target="_blank" rel="noreferrer" className="social-icon"><FaWhatsapp /></a>
                 <a href="https://linkedin.com/in/aleks-goldenberg-841069256" target="_blank" rel="noreferrer" className="social-icon"><FaLinkedinIn /></a>
+                <a href="https://github.com/algoldenberg" target="_blank" rel="noreferrer" className="social-icon"><FaGithub /></a>
               </div>
             </li>
           </ul>
@@ -80,6 +81,7 @@ function Header() {
               <a href="https://t.me/goldenberga" target="_blank" rel="noreferrer" className="social-icon"><FaTelegramPlane /></a>
               <a href="https://wa.me/972506967370" target="_blank" rel="noreferrer" className="social-icon"><FaWhatsapp /></a>
               <a href="https://linkedin.com/in/aleks-goldenberg-841069256" target="_blank" rel="noreferrer" className="social-icon"><FaLinkedinIn /></a>
+              <a href="https://github.com/algoldenberg" target="_blank" rel="noreferrer" className="social-icon"><FaGithub /></a>
             </div>
 
             <a href="mailto:algoldenberga@gmail.com" className="connect-btn">

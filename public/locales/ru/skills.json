@@ -1,11 +1,10 @@
 {
-    "title": "Навыки и технологии",
-    "processOptimization": "Оптимизация процессов и автоматизация рабочих потоков",
-    "crossFunctionalCollab": "Кросс-функциональное взаимодействие (продукт, разработка, аналитика, продажи)",
-    "requirementsGathering": "Сбор требований и планирование фич",
-    "promptDesign": "Проектирование промтов и сценариев для чат-ботов (OpenAI, Telegram)",
-    "toolsCoordination": "Salesforce, Bitrix, Google Analytics, Notion, Power BI (координация)",
-    "dashboarding": "Дашборды и KPI-мониторинг",
-    "edtechExperience": "Опыт в EdTech, LMS-системах и разработке учебных программ"
-  }
-  
+  "title": "Технический Стек",
+  "infrastructureAutomation": "Автоматизация и Оркестрация Инфраструктуры",
+  "cicdPipelines": "Проектирование и Внедрение CI/CD Пайплайнов",
+  "containerization": "Контейнеризация и Управление Docker",
+  "microservices": "Архитектура Микросервисов",
+  "cloudInfrastructure": "Облачная Инфраструктура (AWS, VPS, GPU)",
+  "systemMonitoring": "Мониторинг Систем и Логирование",
+  "processOptimization": "Оптимизация Процессов и Автоматизация Деплоя"
+}

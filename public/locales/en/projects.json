@@ -1,15 +1,21 @@
 {
   "title": "Projects",
-  "description": "A collection of projects in automation, client work, and passion side-quests. Use filters to explore what's interesting.",
+  "description": "Infrastructure projects and automation solutions",
   "categories": {
     "all": "All",
     "featured": "Featured",
-    "automation": "Automation & Bots",
-    "webapp": "Web Applications",
+    "devops": "DevOps",
+    "infrastructure": "Infrastructure",
+    "automation": "Automation",
+    "webapp": "Web Apps",
     "client": "Client Work",
-    "civic": "Civic / Social",
-    "fun": "Just for Fun"
+    "civic": "Public Tools",
+    "fun": "Fun Projects"
   },
+  "airplane_tracker_desc": "Real-time airplane tracking system with microservices architecture. Python, FastAPI, React, Docker, Redis, GitHub Actions, Nginx. Zero-downtime deployment with custom tracking algorithm.",
+  "ai_voice_desc": "AI-powered voice training simulator with real-time STT/TTS. Python, Node.js, Flask, OpenAI GPT-4, Whisper, ElevenLabs, Runpod GPU. Sub-3-second response time, 30+ users tested.",
+  "devops_provisioning_desc": "Infrastructure provisioning tool with OOP architecture. Python, Pydantic, Bash, subprocess, Git. Idempotent scripts, JSON configs, dual logging system.",
+  "home_infrastructure_desc": "24/7 home automation system with remote monitoring. Python, Flask, Telegram Bot, Tailscale VPN, AdGuard Home, Raspberry Pi. WOL, VPN mesh network.",
   "darcon_desc": "Darcon calculator for new immigrants in Israel. Allows you to estimate your eligibility for a 5- or 10-year Israeli passport based on your Aliyah date and time spent abroad. Official Ministry of Interior rules are taken into account, and the calculator shows how many months remain and provides a clear explanation. Currently available only in Russian, with English and Ukrainian versions coming soon.",
   "hr_bot_desc": "A Telegram-based CRM system for automating high-volume hiring for corporate clients and recruiting agencies. Fully developed by me (Python + aiogram), with multilingual support. Connects HR managers with recruiters, allows candidates to view and apply to jobs, and enables recruiters to refer candidates and earn bonuses if their referrals are hired.",
   "diagnostic_desc": "A Telegram bot that acts as a virtual assistant to identify client needs. Fully developed from scratch: GPT logic, interface, and dialogue flow. It selects the optimal AI solution based on user responses.",

@@ -1,6 +1,6 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { FaTelegramPlane, FaWhatsapp, FaLinkedinIn, FaFacebookF } from 'react-icons/fa';
+import { FaTelegramPlane, FaWhatsapp, FaLinkedinIn, FaGithub } from 'react-icons/fa';
 import '../styles/Footer.css';
 
 function Footer() {
@@ -26,6 +26,9 @@ function Footer() {
           </a>
           <a href="https://linkedin.com/in/aleks-goldenberg-841069256" target="_blank" rel="noreferrer">
             <FaLinkedinIn />
+          </a>
+          <a href="https://github.com/algoldenberg" target="_blank" rel="noreferrer">
+            <FaGithub />
           </a>
         </div>
       </div>

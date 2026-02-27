@@ -1,10 +1,9 @@
 {
-    "badge": "Welcome to my portfolio!",
-    "greeting": "Hi! I'm",
-    "name": "Alex Goldenberg",
-    "animatedRoles": [
-      "Automation Engineer & Business Analyst"
-    ],
-    "description": "I specialize in automating workflows and designing smart tools that solve real business problems. With hands-on experience in project management, chatbot development, and process optimization, I create user-focused solutions that improve team efficiency and customer experience."
-  }
-  
+  "badge": "DevOps Engineer",
+  "greeting": "Hi! I'm",
+  "name": "Alex Goldenberg",
+  "animatedRoles": [
+    "DevOps Engineer & Infrastructure Automation Specialist"
+  ],
+  "description": "Building scalable systems with Docker, Python, and Cloud Infrastructure. Specializing in CI/CD pipelines, microservices architecture, and infrastructure automation."
+}
