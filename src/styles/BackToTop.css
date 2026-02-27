@@ -1,6 +1,6 @@
 .back-to-top {
   position: fixed;
-  bottom: 10rem;
+  bottom: 5rem;  /* Поднимаем выше */
   right: 2rem;
   width: 48px;
   height: 48px;
@@ -50,7 +50,7 @@
     width: 56px;
     height: 56px;
     font-size: 1.4rem;
-    bottom: 3rem;
+    bottom: 6rem;  /* Изменил с 3rem на 6rem */
     right: 3rem;
   }
 
@@ -65,7 +65,7 @@
     width: 46px;
     height: 46px;
     font-size: 1.1rem;
-    bottom: 2rem;
+    bottom: 4rem;  /* Изменил с 2rem на 4rem */
     right: 2rem;
   }
 
@@ -80,7 +80,7 @@
     width: 44px;
     height: 44px;
     font-size: 1rem;
-    bottom: 1.5rem;
+    bottom: 3rem;  /* Изменил с 1.5rem на 3rem */
     right: 1.5rem;
   }
 
@@ -95,7 +95,7 @@
     width: 42px;
     height: 42px;
     font-size: 1rem;
-    bottom: 1.2rem;
+    bottom: 2.5rem;  /* Изменил с 1.2rem на 2.5rem */
     right: 1.2rem;
   }
 
@@ -110,7 +110,7 @@
     width: 40px;
     height: 40px;
     font-size: 0.95rem;
-    bottom: 1rem;
+    bottom: 2rem;  /* Изменил с 1rem на 2rem */
     right: 1rem;
   }
 
